@@ -81,6 +81,7 @@ yarn install
 You can start the server using this command:
 
 ```bash
+nvm use 18.16.0
 yarn dev
 ```
 
