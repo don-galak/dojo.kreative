@@ -26,8 +26,8 @@ import Skeleton from '@/components/Skeleton';
 type Color = (typeof colorList)[number];
 
 export default function ComponentsPage() {
-  const [mode, setMode] = React.useState<'dark' | 'light'>('light');
-  const [color, setColor] = React.useState<Color>('sky');
+  const [mode, setMode] = React.useState<'dark' | 'light'>('dark');
+  const [color, setColor] = React.useState<Color>('red');
   function toggleMode() {
     return mode === 'dark' ? setMode('light') : setMode('dark');
   }
@@ -43,7 +43,8 @@ export default function ComponentsPage() {
 
       <main>
         <section
-          className={clsx(mode === 'dark' ? 'bg-dark' : 'bg-white', color)}
+          // className={clsx(mode === 'dark' ? 'bg-dark' : 'bg-white', color)}
+          className={clsx('bg-dark', color)}
         >
           <div
             className={clsx(
